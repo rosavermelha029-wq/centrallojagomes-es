@@ -1,0 +1,944 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito Cidade Nobre - Materiais de Construção & Reformas</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #FF5722;
+            --primary-hover: #E64A19;
+            --primary-light: rgba(255, 87, 34, 0.1);
+            --secondary: #1E293B;
+            --dark: #0F172A;
+            --accent: #2563EB;
+            --bg-light: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 20px 30px -10px rgba(0,0,0,0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* --- Header & Top Bar --- */
+        .top-bar {
+            background: var(--dark);
+            color: #94A3B8;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify: space-between;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-info span i {
+            color: var(--primary);
+            margin-right: 6px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary), #FF8A65);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border);
+            color: var(--dark);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .btn-external {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: white;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-external:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 90px 0 70px;
+            background: radial-gradient(circle at 90% 10%, rgba(255, 87, 34, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 10% 90%, rgba(37, 99, 235, 0.05) 0%, transparent 40%);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 87, 34, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .status-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .status-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .status-badge {
+            background: #DEF7EC;
+            color: #03543F;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #31C48D;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .status-item .label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .status-item .value {
+            color: var(--dark);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        /* --- Serviços Section --- */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            top: 0;
+        }
+
+        .service-card:hover {
+            top: -8px;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- Banner Redirecionamento --- */
+        .redirect-banner {
+            background: linear-gradient(135deg, var(--secondary), var(--dark));
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .redirect-banner::after {
+            content: '';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 87, 34, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .redirect-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .redirect-content p {
+            color: #94A3B8;
+            font-size: 1rem;
+        }
+
+        /* --- Informações da Empresa --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-card-header i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .info-card-header h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        .info-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-row label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .info-row span, .info-row a {
+            font-size: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .info-row a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Localização / Mapa Mock --- */
+        .map-box {
+            background: #E2E8F0;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px dashed #CBD5E1;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background: var(--dark);
+            color: #94A3B8;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .redirect-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .top-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-location-dot"></i> Cidade Nobre - Ipatinga / MG</span>
+                <span><i class="fa-solid fa-phone"></i> (31) 3828-9524</span>
+                <span><i class="fa-solid fa-envelope"></i> financeiro@lojagomes.com.br</span>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-shield-halved"></i> Filial Ativa & Registrada</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Cidade Nobre</h1>
+                    <span>Depósito de Materiais</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#servicos" class="nav-link">Principais Serviços</a></li>
+                    <li><a href="#registro" class="nav-link">Dados Cadastrais</a></li>
+                    <li><a href="#contato" class="nav-link">Contato & Localização</a></li>
+                </ul>
+            </nav>
+
+            <a href="https://www.lojagomes.com.br/" target="_blank" rel="noopener" class="btn btn-external">
+                <i class="fa-solid fa-store"></i> Ir para Loja Oficial
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="badge">
+                    <i class="fa-solid fa-check-circle"></i> Unidade Filial Oficial - Ipatinga/MG
+                </div>
+                <h1 class="hero-title">Soluções completas para sua <span>construção</span> e reforma</h1>
+                <p class="hero-subtitle">
+                    Qualidade, tradição e agilidade no fornecimento de materiais de construção do piso ao teto. Conheça nossa unidade no bairro Cidade Nobre.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://www.lojagomes.com.br/" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i> Acessar Site Original (Loja Gomes)
+                    </a>
+                    <a href="#servicos" class="btn btn-outline">
+                        <i class="fa-solid fa-list-check"></i> Ver Serviços
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="status-card">
+                    <div class="status-card-header">
+                        <h3 class="brand-font" style="font-size:1.1rem; color:var(--dark);">Status Corporativo</h3>
+                        <div class="status-badge">Situação Ativa</div>
+                    </div>
+                    <ul class="status-list">
+                        <li class="status-item">
+                            <span class="label">Razão Social:</span>
+                            <span class="value">Deposito Cidade Nobre Ltda.</span>
+                        </li>
+                        <li class="status-item">
+                            <span class="label">CNPJ:</span>
+                            <span class="value">05.118.445/0002-75</span>
+                        </li>
+                        <li class="status-item">
+                            <span class="label">Inscrição Estadual:</span>
+                            <span class="value">313186430.01-59</span>
+                        </li>
+                        <li class="status-item">
+                            <span class="label">Tempo no Mercado:</span>
+                            <span class="value">+6 Anos de Atuação</span>
+                        </li>
+                        <li class="status-item">
+                            <span class="label">Capital Social:</span>
+                            <span class="value">R$ 100.000,00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Serviços Section -->
+    <section id="servicos" class="section" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">O que oferecemos</span>
+                <h2 class="section-title">Principais Serviços & Produtos</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <h3>Materiais Básicos</h3>
+                    <p>Fornecimento completo de cimento, tijolos, areia, brita, argamassas e ferragens para fundação e estrutura básica de obras.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Material Elétrico</h3>
+                    <p>Fios, cabos, disjuntores, tomadas, interruptores e painéis de distribuição com certificação de segurança para seu imóvel.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-faucet-drip"></i>
+                    </div>
+                    <h3>Hidráulica e Tubulações</h3>
+                    <p>Tubos, conexões, caixas d'água, sistemas de esgoto, torneiras e acessórios para instalações hidráulicas completas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3>Tintas e Acabamento</h3>
+                    <p>Tintas imobiliárias, impermeabilizantes, pincéis, rolos, massas corridas e complementos para pintura interna e externa.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3>Entrega Expressa Obras</h3>
+                    <p>Logística ágil e preparada para entregar seus materiais diretamente no local da sua obra com total segurança.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3>Orçamentos Sob Medida</h3>
+                    <p>Atendimento especializado para quantificação de materiais e elaboração de orçamentos competitivos para reformas e construções.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redirect Banner Index -->
+    <section class="section" style="padding: 40px 0;">
+        <div class="container">
+            <div class="redirect-banner">
+                <div class="redirect-content">
+                    <h3 class="brand-font">Deseja comprar online?</h3>
+                    <p>Visite nosso e-commerce oficial na Loja Gomes e confira ofertas exclusivas com entrega para toda a região.</p>
+                </div>
+                <a href="https://www.lojagomes.com.br/" target="_blank" rel="noopener" class="btn btn-primary" style="white-space: nowrap; font-size:1rem; padding: 16px 32px;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar LojaGomes.com.br
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações da Empresa & Contato -->
+    <section id="registro" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transparência & Registro</span>
+                <h2 class="section-title">Informações Institucionais e Cadastrais</h2>
+            </div>
+
+            <div class="info-grid">
+                <!-- Card Registro -->
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-id-card"></i>
+                        <h3 class="brand-font">Registro Fiscal</h3>
+                    </div>
+                    <div class="info-details">
+                        <div class="info-row">
+                            <label>Razão Social</label>
+                            <span>Deposito Cidade Nobre Ltda.</span>
+                        </div>
+                        <div class="info-row">
+                            <label>CNPJ</label>
+                            <span>05.118.445/0002-75 (05118445000275)</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Inscrição Estadual (MG)</label>
+                            <span>313186430.01-59</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Data de Abertura</label>
+                            <span>08/04/2020 (6 anos, 5 meses)</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Tipo de Estabelecimento</label>
+                            <span>Filial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Quadro Jurídico -->
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <h3 class="brand-font">Enquadramento Jurídico</h3>
+                    </div>
+                    <div class="info-details">
+                        <div class="info-row">
+                            <label>Natureza Jurídica</label>
+                            <span>Sociedade Empresária Limitada</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Porte</label>
+                            <span>Sem Enquadramento</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Opção pelo Simples</label>
+                            <span>Não</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Opção pelo MEI</label>
+                            <span>Não</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Capital Social Subscrito</label>
+                            <span>R$ 100.000,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Contato & Endereço -->
+                <div class="info-card" id="contato">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <h3 class="brand-font">Localização & Contato</h3>
+                    </div>
+                    <div class="info-details">
+                        <div class="info-row">
+                            <label>Telefone para Atendimento</label>
+                            <a href="tel:3138289524"><i class="fa-solid fa-phone"></i> (31) 3828-9524</a>
+                        </div>
+                        <div class="info-row">
+                            <label>E-mail Financeiro / Comercial</label>
+                            <a href="mailto:financeiro@lojagomes.com.br"><i class="fa-solid fa-envelope"></i> financeiro@lojagomes.com.br</a>
+                        </div>
+                        <div class="info-row">
+                            <label>Endereço de Correspondência</label>
+                            <span>Rua Inconfidencia Mineira, 31<br>Bairro Cidade Nobre - Ipatinga / MG<br>CEP: 35162-375</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box do Endereço Completo -->
+            <div class="map-box" style="margin-top: 40px; background: white; border: 1px solid var(--border); padding: 30px;">
+                <h4 class="brand-font" style="color:var(--dark); margin-bottom: 10px; font-size:1.2rem;">
+                    <i class="fa-solid fa-map-pin" style="color:var(--primary);"></i> Endereço para Correspondência e Visitas
+                </h4>
+                <p style="color:var(--text-main); font-weight:600;">
+                    Deposito Cidade Nobre Ltda. — Rua Inconfidencia Mineira 31, Cidade Nobre, Ipatinga - MG, CEP: 35162-375
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1 style="color:white;">Cidade Nobre</h1>
+                            <span style="color:#94A3B8;">Depósito de Materiais</span>
+                        </div>
+                    </div>
+                    <p>Unidade Filial do Depósito Cidade Nobre Ltda. Atendendo Ipatinga e região do Vale do Aço com excelência em produtos e soluções para construção civil.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Principais Serviços</a></li>
+                        <li><a href="#registro">Informações Cadastrais</a></li>
+                        <li><a href="#contato">Localização & Contato</a></li>
+                        <li><a href="https://www.lojagomes.com.br/" target="_blank" rel="noopener">E-commerce Loja Gomes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Loja Virtual</h4>
+                    <p style="margin-bottom: 16px;">Acesse a loja online para catálogo completo de produtos e compras online.</p>
+                    <a href="https://www.lojagomes.com.br/" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+                        <i class="fa-solid fa-bag-shopping"></i> Visitar Site Oficial
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Deposito Cidade Nobre Ltda. — CNPJ: 05.118.445/0002-75. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
